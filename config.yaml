@@ -1,0 +1,14 @@
+proxy:
+  secretToken: "4731bb39d2f0234c529bb360e152175c0ef8c813044576d2e2cc40a8d5698c35"                                                    
+hub:
+  config:
+    JupyterHub:
+      authenticator_class: ldapauthenticator.LDAPAuthenticator
+    LDAPAuthenticator:
+      bind_dn_template:
+        - cn={username},dc=example, dc=org
+      server_address:  10.110.189.215
+      service_port: 1389
+      
+      
+      
